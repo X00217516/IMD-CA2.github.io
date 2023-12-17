@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap 5 :3</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <style>
+    body {
+      background-color: #232323;
+      color: #fff;
+    }
+
+    .intro-text {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #f8f9fa;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      text-align: justify;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+      position: relative;
+      overflow: hidden;
+      /* Hide overflowing content */
+    }
+
+    .intro-text:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .intro-text::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      border: 3px solid #001aff;
+      border-radius: 12px;
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+
+    .center-pills {
+      display: flex;
+      justify-content: center;
+    }
+
+    .fill-width {
+      width: 100%;
+    }
+
+    /* Adding the color change for nav pills */
+    .nav-pills .nav-link {
+      background-color: #3b3b3b;
+      color: #fff;
+    }
+    .custom-card-title {
+            text-align: center;
+            font-size: 24px; /* Adjust the font size as needed */
+        }
+
+        .container-bg {
+    background: #323333;
+}
+.container-bg2 {
+    background: #898b8b;
+}
+  </style>
+</head>
+
+<body>
+
+
+
+
+
+  <!-- Carousel wrapper -->
+  <div id="carouselBasicExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselBasicExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselBasicExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselBasicExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+
+
+
+    <!-- Inner -->
+    <div class="carousel-inner">
+      
+
+
+      <div class="carousel-item active">
+        <img src="IMAGES/banner3.png" class="d-block w-100" alt="Sunset Over the City" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>My Portfolio and CV </h5>
+          <p>Welcome to my Webpage, here you will learn all you need to know about me!</p>
+        </div>
+      </div>
+
+
+
+      <div class="carousel-item">
+        <img src="IMAGES/banner2.png" class="d-block w-100" alt="Canyon at Nigh" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>I.T Management Professional</h5>
+          <p>I have achieved a Bsc in I.T Management and Cloud Computing</p>
+        </div>
+      </div>
+
+
+
+
+      <div class="carousel-item">
+        <img src="IMAGES/banner4.png" class="d-block w-100" alt="Cliff Above a Stormy Sea" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Skilled in Many Programming Languages</h5>
+          <p>I am a proficient programmer and coder, with skills in languages such as Python & JavaScript</p>
+        </div>
+      </div>
+    </div>
+    <!-- Inner -->
+
+
+
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselBasicExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselBasicExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Carousel wrapper -->
+
+
+
+
+
+
+  <!-- container -->
+  <div class="container-fluid">
+
+  <ul class="nav nav-pills mb-3 center-pills" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Who am I?</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Education</button>
+    </li>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCentered">Contact Me</button>
+<li class="nav-item" role="presentation">
+  <a class="nav-link" id="pills-profile-tab" href="features.html" role="tab" aria-controls="pills-profile" aria-selected="false">Boot Strap Features</a>
+</li>
+
+  </ul>
+
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"></th>
+            <td>Jack</td>
+            <td>Gilleece</td>
+            <td>Email@address.com</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="intro-text">
+        <p>
+          Hello there! I'm Jack Gilleece, an IT expert with in-depth skills within information and technology environments. Armed with a solid foundation in I.T. management and a flair for scripting languages like Java and Python, I thrive on turning complex challenges into streamlined solutions. My journey includes earning a BSc in Cloud Computing, adding a touch of the ethereal to my tech expertise. Ready to explore the boundless possibilities of the digital realm, I'm always eager to merge innovation with practicality.
+        </p>
+        <figure class="figure">
+          <img src="IMAGES/me.jpg" class="figure-img img-fluid rounded" alt="...">
+          <figcaption class="figure-caption">My portfolio image</figcaption>
+        </figure>
+      </div>
+
+    </div>
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+      <div class="d-flex align-items-start">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">University</button>
+          <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">High school</button>
+        </div>
+        <div class="tab-content fill-width" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+
+            <h1>Technological University Dublin - Year 4</h1>
+            <h2>BSc(Hons) Cloud Computing </h2>
+            <table class="table table-dark table-striped fill-width">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Subject</th>
+                  <th scope="col">Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+
+                  <td colspan="3" class="table-active"> <h1> Semester 1</h1></td>
+
+                </tr>
+
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Information Management</td>
+                  <td>A</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Security for Cloud and the Internet of Things</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Interactive Media Design & Visualisation</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Private Cloud Architecture</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Enterprise Performance Architecture</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>DevOps - Continuous Integration and Deployment</td>
+                  <td>A</td>
+                </tr>
+                <td colspan="3"> <h1> Semester 2</h1></td>
+
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Subject 1</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Subject 2</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Subject 3</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Subject 4</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Subject 5</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Subject 6</td>
+                  <td>A</td>
+                </tr>
+
+              </tbody>
+            </table>
+
+          </div>
+          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+
+            <h1>Newry High School </h1>
+            <h2>A Levels </h2>
+            <table class="table table-dark table-striped fill-width">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Subject</th>
+                  <th scope="col">Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+
+                </tr>
+
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Geography</td>
+                  <td>A</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">2</th>
+                  <td>History</td>
+                  <td>A</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">3</th>
+                  <td>I.T</td>
+                  <td>A</td>
+                </tr>
+
+                <tr>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>GCSE's</h2>
+
+            <table class="table table-dark table-striped fill-width">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Subject</th>
+                  <th scope="col">Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+
+                </tr>
+
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Geography</td>
+                  <td>A</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">2</th>
+                  <td>History</td>
+                  <td>A</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">3</th>
+                  <td>I.T</td>
+                  <td>A</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Chemistry</td>
+                  <td>A</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Biology</td>
+                  <td>A</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Physics</td>
+                  <td>A</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">7</th>
+                  <td>English</td>
+                  <td>A</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">8</th>
+                  <td>Maths</td>
+                  <td>A</td>
+                </tr>
+
+                <tr>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="tab-pane fade" id="v-pills-profile2" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+  </div>
+  </div>
+
+
+
+
+      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"></div>
+      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"></div>
+    </div>
+  </div>
+  
+  </div>
+  
+
+  <div class="container-fluid">
+
+    <!-- Project Card -->
+    <div class="card mt-3">
+      <div class="container-bg">
+        <div class="card-body">
+          <h5 class="card-title custom-card-title text-light">My University Projects</h5>
+
+            <div class="card">
+              <div class="container-bg2">
+              <div class="row g-0">
+                <div class="col-5 col-sm-4">
+                  <div class="container-bg2"></div>
+                  <img src="IMAGES/network.png" class="img-fluid w-100" alt="card-horizontal-image">
+                </div>
+                
+                <div class="col-7 col-sm-8">
+                  <div class="container-bg2">
+                  <div class="card-body">
+                    <h5 class="card-title">3rd Year Project</h5>
+                    <p class="card-text">
+                      In the third year of my university course, I undertook a project to establish a functional network using CISCO Packet Tracer. 
+                      In this endeavor, I implemented various systems, including VLANs, VPNs, and fault tolerance methods. 
+                      The network boasts essential servers such as a DNS server, Mailing server, and a dedicated server for managing IPs and VLANs. 
+                      Additionally, NAT/PAT has been seamlessly integrated into the network for enhanced functionality. 
+                    </p>  
+                    <p class="card-text">
+                      Here we  can see an image of our finished project, the coloured boxes outlineing our differnt VLANs, 
+                      with the rounded boxes reporesenting our servers, and Additional networks outside of our main one.
+                    </p>
+
+                  </div>
+                </div>
+                </div>
+
+                <div class="card">
+                  <div class="container-bg2">
+                  <div class="row g-0">
+                    <div class="col-5 col-sm-4">
+                      <img src="IMAGES/aws.png" class="img-fluid w-100" alt="card-horizontal-image">
+                    </div>
+                    <div class="col-7 col-sm-8">
+                      <div class="card-body">
+                        <h5 class="card-title">4th year projects</h5>
+                        <p class="card-text">
+
+                          Within fourth year of my course, I developed an application, the purpose of this application is to allow me the ability to use recognition software on animal pictures uploaded to S3 buckets,
+                           providing me with a similarity percentage. The use case for this is a web application called “Lost Pet Finder” and is used for helping users find pets they have lost, or uploaded images of pets they have found, 
+                           growing a database of lost pets and pets found and with the help of AI recognition we can analysed similarities of these pets to help people find theirs. 
+
+                        </p>
+                        
+                        <p class="card-text">
+                          Here we can see a diagram i use to plan out the project, with all the components and technologies i used within the project.
+                        </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid"> 
+  <h1 class="text-center" >Ideal Jobs</h1>
+    <div class="card-group">
+      <div class="card">
+        <h5 class="text-center" >I.T Manager</h5>
+        <img src="IMAGES/Manager.jpg" class="card-img-top" alt="card-group-image" id="spinningImage">
+        <div class="card-body">
+          <p class="card-text">
+            
+            One of my ideal jobs is to be an IT manager because it aligns with my passion for technology and leadership. 
+            with four years studying it management I have learnt that it offers the opportunity to blend technical expertise with strategic decision-making. 
+            I thrive on solving complex problems and believe that as an IT manager, I can guide a team towards efficiency, innovation, 
+            and overall success. The role encapsulates my skills and enthusiasm, making it the ideal path for my professional growth.
+          
+          </p>
+       
+          </div>
+        <div class="card-footer">
+        </div>
+      </div>
+      <div class="card">
+        <h5 class="text-center" >Lecturer</h5>
+        <img src="IMAGES/Lecturer.jpg" class="card-img-top enlarge-on-hover" alt="card-group-image" id="enlargeImage">
+        <div class="card-body">
+          
+          <p class="card-text">
+
+            I am drawn to the role of a lecturer because of my passion for sharing knowledge and helping with intellectual growth. Education is a powerful tool, 
+            and as a lecturer, I see the chance to inspire and guide students on their academic journey. The prospect of creating an engaging learning environment, 
+            facilitating meaningful discussions, and contributing to the development of future professionals excites me. Becoming a lecturer is not just a career choice for me; 
+            it's a fulfilling opportunity to make a positive impact on the lives of others through education.
+
+          </p>
+        </div>
+        <div class="card-footer">
+        </div>
+      </div>
+      <div class="card">
+        <h5 class="text-center" >Cloud Solutions Architect</h5>
+        <img src="IMAGES/cloud.jpg" class="card-img-top spin-on-hover" alt="card-group-image" id="spinImage">
+        <div class="card-body">
+          <p class="card-text">
+
+            The thrid job i find ideal for myself is that of a Cloud Solutions Architect. This is due to the fact that I am captivated by the prospect of crafting cutting-edge, scalable, and efficient cloud-based solutions. 
+            This role blends my passion for innovation with a keen understanding of technology, allowing me to design robust architectures that meet the unique needs of diverse organizations. 
+            I am excited about the challenge of optimizing performance, ensuring security, and integrating seamless functionalities within cloud environments. 
+            The dynamic nature of Cloud Solutions Architecture appeals to my problem-solving mindset, pushing me to stay at the forefront of emerging technologies. 
+            I am eager to leverage my skills in system design, strategic planning, and cloud technologies to create impactful solutions that drive organizational success in an ever-evolving digital landscape.
+
+          </p>
+        </div>
+        <div class="card-footer">
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+
+<div class="container-fluid"> 
+  <h1 class="text-center" >Hobbies and Interests</h1>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card">
+      <h5 class="text-center">Video Games</h5>
+      <img src="IMAGES/Vgame.png" class="card-img-top">
+      <div class="card-body">
+        
+        <p class="card-text">
+
+          Video games have been a passion of mine for as long as I can remember, providing an immersive escape into diverse virtual worlds. 
+          I find joy in exploring the intricate narratives and character developments within Role-Playing Games (RPGs), where every decision shapes the unfolding story. 
+          Engaging in the strategic intensity of First-Person Shooter (FPS) games adds an adrenaline rush, testing my reflexes and tactical thinking. Additionally, 
+          I'm drawn to the intricate world of deck-building games, where each deck becomes a unique strategy canvas, requiring careful planning and adaptability. 
+          This digital realm not only entertains but also serves as a canvas for creativity and strategic thinking, making video gaming a dynamic and fulfilling hobby that spans various genres and experiences.
+
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <h5 class="text-center">Animals</h5>
+      <img src="IMAGES/dog.png" class="card-img-top">
+      <div class="card-body">
+        <p class="card-text">
+
+          My profound love for animals, particularly dogs, is a cornerstone of my interests. Among these cherished companions, 
+          my own dog, Scout, a Border Collie, holds a special place in my heart. Border Collies, known for their intelligence and boundless energy, 
+          bring an extraordinary level of joy and companionship into my life.
+
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <h5 class="text-center">Table Top and Card Games</h5>
+      <img src="IMAGES/cardgame.png" class="card-img-top">
+      <div class="card-body">
+        <p class="card-text">
+
+          Tabletop and card games hold a special place in my heart, providing a dynamic blend of strategy and social interaction. 
+          Dungeons & Dragons transports me into fantastical realms where storytelling and collaboration intertwine, 
+          creating memorable adventures with fellow players. Meanwhile, Yu-Gi-Oh taps into my strategic side, 
+          offering thrilling card duels and the joy of crafting powerful decks. Whether embarking on epic quests or engaging in intense card battles, 
+          these games not only entertain but also foster connections and shared moments of excitement, making them an essential and cherished part of my leisure pursuits.
+
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <h5 class="text-center">Reading</h5>
+      <img src="IMAGES/reading.png" class="card-img-top">
+      <div class="card-body">
+        <p class="card-text">
+
+          Immersing myself in the world of reading is not just a hobby but a journey of endless discovery. 
+          The pages of books like "The Witcher" series transport me to realms where magic intertwines with the human experience, 
+          offering a thrilling escape into dark fantasy. Exploring the expansive Star Wars Legends universe delves into the epic saga, 
+          where iconic characters and space opera adventures unfold with each turn of the page. Beyond specific series, 
+          my love for sci-fi and fantasy books in general takes me on adventures across galaxies, introducing me to futuristic worlds, complex characters, 
+          and imaginative concepts. Each book becomes a portal to new dimensions, sparking my imagination and enriching my understanding of different realms and possibilities. 
+          Reading, for me, is not just a pastime but a passport to diverse universes waiting to be explored.
+
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCentered" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-dark" id="exampleModalCenteredLabel">Contact Me</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <h5 class="text-center text-dark mb-0">
+          Here i have provided my contact information.
+        </h5>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Full Name</th>
+              <th scope="col">Jack Gilleece</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col">Email Address</th>
+              <th scope="col">email@address.com</th>
+            </tr>
+            <tr>
+              <th scope="col">Home Address</th>
+              <th scope="col">Home street 55, ER15 7LD</th>
+            </tr>
+            <tr>
+              <th scope="col">Phone Number</th>
+              <th scope="col">0700000000</th>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Mouse over Scripts -->
+<script>
+
+
+  var myModal = document.getElementById('exampleModalCentered');
+  var myInput = document.getElementById('myInput');
+
+
+  myModal.addEventListener('shown.bs.modal', function () {
+    myInput.focus();
+  });
+
+
+
+
+  var enlargeImage = document.getElementById('enlargeImage');
+
+
+  enlargeImage.addEventListener('mouseover', function() {
+    this.style.transition = 'transform 0.5s';
+    this.style.transform = 'scale(1.1)';
+  });
+
+
+
+
+  enlargeImage.addEventListener('mouseout', function() {
+    this.style.transition = 'transform 0.5s';
+    this.style.transform = 'scale(1)';
+  });
+
+
+
+  var spinImage = document.getElementById('spinImage');
+
+  spinImage.addEventListener('mouseover', function() {
+    this.style.transition = 'transform 1s';
+    this.style.transform = 'rotate(-360deg)';
+  });
+
+
+
+  spinImage.addEventListener('mouseout', function() {
+    this.style.transition = 'transform 1s';
+    this.style.transform = 'rotate(0deg)';
+  });
+
+
+</script>
+
+
+<!-- Modal -->
+
+<script>
+
+
+  var spinningImage = document.getElementById('spinningImage');
+
+
+  spinningImage.addEventListener('mouseover', function() {
+    this.style.transition = 'transform 1s';
+    this.style.transform = 'rotate(360deg)';
+  });
+
+
+
+  spinningImage.addEventListener('mouseout', function() {
+    this.style.transition = 'transform 1s';
+    this.style.transform = 'rotate(0deg)';
+  });
+
+
+</script>
+
+
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="js/Bootstrap.js"></script>
+  
+</body>
+
+</html>
